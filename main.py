@@ -1,14 +1,14 @@
-#from functools import reduce  -- not needed anymore
+
 from time import sleep
 from colorama import init, Fore
 
-init() # properly initliaze colorama
+init() 
 
 game_array = [" "] * 9
 user1 = ""
 user2 = ""
 
-# simplify adding moves because wtf? why was it so terrible? didn't have to do all of that
+
 
 def add_move(spot, user):
     game_array[spot - 1] = user
