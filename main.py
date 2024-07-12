@@ -4,8 +4,6 @@ from colorama import Fore
 
 gameWon = False
 gameArray = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
-row = 0
-column = 0
 user = ""
 personToGo = 0
 
@@ -60,19 +58,8 @@ def checkWin(user1, user2):
 
     return "The game ended in a draw."
 
-
-
 # -----------------------------------------
 
-def buildBoard(arr):
-    counter = 0
-    for y in range(3):
-        for x in range(3):
-            print (Fore.GREEN + "[" + str(gameArray[counter]).translate({39: None}) + "] ",end="")
-            counter += 1
-        print(Fore.BLUE + "|" + "\n")
-
-# -----------------------------------------
 def checkArr(arr):
     counterAgain = 0
     checkArr = []
@@ -96,25 +83,8 @@ def checkArrTrue(arr):
         counterAgain += 1
     #print(checkArrTrue)
     return checkArrTrue
-    
 
-
-def buildBoardRef(arr):
-        counter1 = 1
-        arr = checkArr(gameArray)
-       
-        #print (counter1 - 1 in arr)
-        for y in range(3):
-            for x in range(3):
-                if arr != []:
-                    if counter1 - 1 in arr: print (Fore.RED + "[" + str(" ").translate({39: None}) + "] ",end="")
-                    else: print (Fore.RED + "[" + str(counter1).translate({39: None}) + "] ",end="")
-                else: print (Fore.RED + "[" + str(counter1).translate({39: None}) + "] ",end="")
-                counter1 += 1
-            print(Fore.BLUE + "|" + "\n")
-
-
-
+# -----------------------------------------
 
 def buildFullBoard(arr):
     counter = 0
